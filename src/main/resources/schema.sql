@@ -43,11 +43,6 @@ ALTER TABLE inditex.prices
 ADD CONSTRAINT pk_prices PRIMARY KEY (price_id);
 
 ALTER TABLE inditex.prices
-ADD CONSTRAINT fk_prices_brand
-FOREIGN KEY (brand_id)
-REFERENCES inditex.brands(brand_id);
-
-ALTER TABLE inditex.prices
 ADD CONSTRAINT fk_prices_product
-FOREIGN KEY (product_id)
-REFERENCES inditex.products(product_id);
+FOREIGN KEY (product_id, brand_id)
+REFERENCES inditex.products(product_id, brand_id);
