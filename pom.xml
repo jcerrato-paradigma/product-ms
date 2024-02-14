@@ -87,6 +87,7 @@
 							</supportingFilesToGenerate>
 							<configOptions>
 								<delegatePattern>true</delegatePattern>
+								<useJakartaEe>true</useJakartaEe>
 							</configOptions>
 						</configuration>
 					</execution>
