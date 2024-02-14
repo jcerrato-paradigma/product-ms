@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:mydb
-    username: usuario1
-    password: 1nd1t3X
+    url: jdbc:h2:mem:inditex-db
+    username: h2-user
+    password:
     driverClassName: org.h2.Driver
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect

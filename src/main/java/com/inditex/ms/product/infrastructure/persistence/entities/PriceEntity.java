@@ -18,9 +18,6 @@ public class PriceEntity {
     @Column(name = "price_id")
     private Long priceId;
 
-    @Column(name = "brand_id")
-    private Integer brandId;
-
     @Column(name = "start_date")
     private String startDate;
 
@@ -30,9 +27,6 @@ public class PriceEntity {
     @Column(name = "price_list")
     private Integer priceList;
 
-    @Column(name = "product_id")
-    private Long productId;
-
     private Integer priority;
 
     private String price;
@@ -40,8 +34,8 @@ public class PriceEntity {
     private String curr;
 
     @JoinColumns({
-            @JoinColumn(referencedColumnName = "product_id"),
-            @JoinColumn(referencedColumnName = "brand_id")
+            @JoinColumn(name = "product_id", referencedColumnName = "product_id"),
+            @JoinColumn(name = "brand_id", referencedColumnName = "brand_id")
     })
     @ManyToOne
     private ProductEntity product;
