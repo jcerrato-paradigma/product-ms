@@ -1,0 +1,84 @@
+openapi: 3.0.1
+info:
+  title: ms_product
+  description: Microservice for Inditex products operations.
+  version: 1.0.0
+servers:
+  - url: "http://localhost:8080/"
+paths:
+  /product/{product_id}/price:
+    get:
+      operationId: findProductPrice
+      tags:
+        - Product prices
+      summary: Get the price of a product.
+      description: Find the price of a product in a date range
+      parameters:
+        - in: path
+          name: product_id
+          description: Product identifier
+          required: true
+          schema:
+            type: integer
+            format: long
+        - in: query
+          name: brand_id
+          description: Brand identifier
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: application_date
+          description: This date is used to find when the price is applied. It must complain with the format 'yyyy-mm-dd-HH.MM.SS', for example '2024-02-14-16.25.30'
+          required: true
+          schema:
+            type: string
+            format: date-time
+            pattern: '^(\d{4})-(\d{2})-(\d{2})-(\d{2})\.(\d{2})\.(\d{2})'
+      responses:
+        200:
+          description: Price is found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/date_range_product_price"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+components:
+  schemas:
+    date_range_product_price:
+      type: object
+      properties:
+        product_id:
+          type: integer
+          description: Product identifier
+          format: long
+          example: 35221
+        brand_id:
+          type: integer
+          description: Brand identifier
+          example: 1
+    error:
+      type: object
+      description: "Error"
+      properties:
+        message:
+          type: string
+          description:
+            It describes the cause of the error
