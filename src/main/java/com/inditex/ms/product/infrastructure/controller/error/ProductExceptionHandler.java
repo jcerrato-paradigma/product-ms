@@ -21,12 +21,6 @@ public class ProductExceptionHandler {
                         .orElse(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<Error> genericExceptionHandler(Exception exception) {
-
-        return getResponseEntityError(exception, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
-
     private ResponseEntity<Error> getResponseEntityError(Exception exception, HttpStatus httpStatus) {
 
         Error error = new Error();
