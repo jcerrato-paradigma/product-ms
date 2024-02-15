@@ -1,13 +1,12 @@
 package com.inditex.ms.product.application.service;
 
 import com.inditex.ms.product.domain.PriceRepository;
+import com.inditex.ms.product.domain.exception.ProductException;
 import com.inditex.ms.product.domain.model.Price;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
@@ -16,6 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -93,5 +93,22 @@ public class PriceServiceTest {
         final Price priceReturned = priceService.findProductPrice(productId, brandId, applicationDate);
 
         assertEquals(price1, priceReturned);
+    }
+
+    @Test
+    void givenNoPriceReturnedFromDatabase_throwException() {
+
+        final int productId = 35455;
+        final int brandId = 1;
+        final LocalDateTime applicationDate = LocalDateTime.now();
+
+        when(priceRepository.findProductPriceByDate(productId, brandId, applicationDate))
+                .thenReturn(Collections.emptyList());
+
+
+        final ProductException productException = assertThrows(ProductException.class,
+                () -> priceService.findProductPrice(productId, brandId, applicationDate));
+
+        assertEquals(404, productException.getHttpStatus());
     }
 }
