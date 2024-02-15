@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "66c47762-ecee-4cf5-bfbf-7a10edba6821",
+		"name": "products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1281899"
+	},
+	"item": [
+		{
+			"name": "Test1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/:product_id/price?brand_id=1&application_date=2020-06-14-10.00.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						":product_id",
+						"price"
+					],
+					"query": [
+						{
+							"key": "brand_id",
+							"value": "1"
+						},
+						{
+							"key": "application_date",
+							"value": "2020-06-14-10.00.00"
+						}
+					],
+					"variable": [
+						{
+							"key": "product_id",
+							"value": "35455"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/:product_id/price?brand_id=1&application_date=2020-06-14-16.00.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						":product_id",
+						"price"
+					],
+					"query": [
+						{
+							"key": "brand_id",
+							"value": "1"
+						},
+						{
+							"key": "application_date",
+							"value": "2020-06-14-16.00.00"
+						}
+					],
+					"variable": [
+						{
+							"key": "product_id",
+							"value": "35455"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/:product_id/price?brand_id=1&application_date=2020-06-14-21.00.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						":product_id",
+						"price"
+					],
+					"query": [
+						{
+							"key": "brand_id",
+							"value": "1"
+						},
+						{
+							"key": "application_date",
+							"value": "2020-06-14-21.00.00"
+						}
+					],
+					"variable": [
+						{
+							"key": "product_id",
+							"value": "35455"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/:product_id/price?brand_id=1&application_date=2020-06-15-10.00.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						":product_id",
+						"price"
+					],
+					"query": [
+						{
+							"key": "brand_id",
+							"value": "1"
+						},
+						{
+							"key": "application_date",
+							"value": "2020-06-15-10.00.00"
+						}
+					],
+					"variable": [
+						{
+							"key": "product_id",
+							"value": "35455"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/:product_id/price?brand_id=1&application_date=2020-06-15-10.00.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						":product_id",
+						"price"
+					],
+					"query": [
+						{
+							"key": "brand_id",
+							"value": "1"
+						},
+						{
+							"key": "application_date",
+							"value": "2020-06-15-10.00.00"
+						}
+					],
+					"variable": [
+						{
+							"key": "product_id",
+							"value": "35455"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
