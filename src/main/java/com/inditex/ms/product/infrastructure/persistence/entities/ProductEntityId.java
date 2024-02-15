@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class ProductEntityId implements Serializable {
 
     @Column(name = "product_id")
-    private Long id;
+    private Integer id;
 
     @Column(name = "brand_id")
     private Integer brandId;

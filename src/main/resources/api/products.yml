@@ -20,7 +20,6 @@ paths:
           required: true
           schema:
             type: integer
-            format: long
         - in: query
           name: brand_id
           description: Brand identifier
@@ -67,17 +66,32 @@ components:
         product_id:
           type: integer
           description: Product identifier
-          format: long
           example: 35221
         brand_id:
           type: integer
           description: Brand identifier
           example: 1
+        price_list:
+          type: integer
+          description: Rate to apply
+          example: 2
+        start_date:
+          type: string
+          description: Start date to apply
+          example: "2020-06-15-00.00.00"
+        end_date:
+          type: string
+          description: End date to apply
+          example: "2020-06-15-11.00.00"
+        price:
+          type: string
+          description: Final price to apply with current
+          example: "30.25 EUR"
     error:
       type: object
       description: "Error"
       properties:
         message:
           type: string
-          description:
-            It describes the cause of the error
+          description: It describes the cause of the error
+          example: "Bad request"

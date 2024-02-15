@@ -16,7 +16,7 @@ public class PriceEntity {
 
     @Id
     @Column(name = "price_id")
-    private Long priceId;
+    private Integer priceId;
 
     @Column(name = "start_date")
     private String startDate;
