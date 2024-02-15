@@ -82,11 +82,8 @@
 							<generatorName>spring</generatorName>
 							<apiPackage>com.inditex.ms.product.infrastructure.controller</apiPackage>
 							<modelPackage>com.inditex.ms.product.infrastructure.controller.dto</modelPackage>
-							<supportingFilesToGenerate>
-								ApiUtil.java
-							</supportingFilesToGenerate>
 							<configOptions>
-								<delegatePattern>true</delegatePattern>
+								<interfaceOnly>true</interfaceOnly>
 								<useJakartaEe>true</useJakartaEe>
 							</configOptions>
 						</configuration>
