@@ -17,9 +17,9 @@ public class JpaRepositoryMapper {
 
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH.mm.ss");
 
-    public String toDateString(LocalDateTime applicationDate) {
+    public String toDateString(LocalDateTime date) {
 
-        return applicationDate.format(FORMATTER);
+        return date.format(FORMATTER);
     }
 
     public List<Price> toPriceList(List<PriceEntity> pricesByDate) {
