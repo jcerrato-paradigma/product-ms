@@ -59,7 +59,7 @@ Once the container is running, the microservice is fully functional as if it wer
 
 To test the microservice, a H2 database is automatically populated with data once it is running. To access to the console of the database go to:
 
-[H2 console](localhost:8080/h2-console)
+`localhost:8080/h2-console`
 
 Moreover, a Postman collection is included to test the endpoint. It is in next path:
 
