@@ -61,6 +61,13 @@ To test the microservice, a H2 database is automatically populated with data onc
 
 `localhost:8080/h2-console`
 
+Params to access are:
+
+- Driver Class: org.h2.Driver
+- JDBC URL: jdbc:h2:mem:inditex-db
+- User Name: h2-user
+- Password: [empty]
+
 Moreover, a Postman collection is included to test the endpoint. It is in next path:
 
 `api/postman/products.postman_collection.json`
