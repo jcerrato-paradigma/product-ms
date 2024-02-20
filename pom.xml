@@ -41,14 +41,14 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.openapitools</groupId>
 			<artifactId>jackson-databind-nullable</artifactId>
 			<version>0.2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.7.0</version>
 		</dependency>
 	</dependencies>
 
@@ -85,6 +85,7 @@
 							<configOptions>
 								<interfaceOnly>true</interfaceOnly>
 								<useJakartaEe>true</useJakartaEe>
+								<annotationLibrary>swagger2</annotationLibrary>
 							</configOptions>
 						</configuration>
 					</execution>

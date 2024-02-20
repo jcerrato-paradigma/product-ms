@@ -76,3 +76,7 @@ In addition, the contract of the API used for OpenAPI is here:
 
 `src/main/resources/api/products.yml`
 
+Finally, once the microservice is running, a Swagger-ui can be accessed in this link:
+
+`http://localhost:8080/swagger-ui/index.html`
+
